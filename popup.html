@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; width: 280px; margin: 0; background: #fff; }
+        .header { font-size: 16px; font-weight: bold; margin-bottom: 15px; text-align: center; color: #333; }
+        .toggle-container { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 10px; background: #f9f9f9; border-radius: 8px; border: 1px solid #eee; }
+        .switch { position: relative; display: inline-block; width: 46px; height: 24px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px; }
+        .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        input:checked + .slider { background-color: #2196F3; }
+        input:checked + .slider:before { transform: translateX(22px); }
+        .settings-section { margin-top: 10px; padding-top: 15px; border-top: 1px solid #eee; }
+        .settings-title { font-size: 13px; color: #555; margin-bottom: 10px; font-weight: bold; }
+        .settings-desc { font-size: 11px; color: #888; margin-bottom: 10px; line-height: 1.4; }
+        select#providerSelect { width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #fff; }
+        input[type="password"] { width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; }
+        button { width: 100%; padding: 8px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #45a049; }
+        #saveMsg { display: none; color: #4CAF50; font-size: 12px; margin-top: 8px; text-align: center; font-weight: bold; }
+        #keyHint { font-size: 10px; color: #999; margin: -6px 0 10px 0; line-height: 1.4; }
+        .radio-option { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #444; margin-bottom: 8px; cursor: pointer; }
+        .radio-option:last-child { margin-bottom: 0; }
+        .radio-option input[type="radio"] { margin: 0; cursor: pointer; flex-shrink: 0; }
+    </style>
+</head>
+<body>
+    <div class="header">日/韓語AI翻譯字幕</div>
+    
+    <div class="toggle-container">
+        <span style="font-size: 14px; font-weight: 500;">啟用雙語字幕</span>
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="settings-section">
+        <div class="settings-title">📺 字幕顯示內容</div>
+        <label class="radio-option">
+            <input type="radio" name="displayMode" value="bilingual" checked>
+            雙語（原文＋中文）
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="displayMode" value="chineseOnly">
+            只顯示中文
+        </label>
+    </div>
+
+    <div class="settings-section">
+        <div class="settings-title">⚙️ 翻譯引擎設定</div>
+        <div class="settings-desc">選擇要使用的翻譯引擎，並輸入對應的 API Key。每個引擎的 Key 會分別儲存，切換時不會互相覆蓋。</div>
+        <select id="providerSelect">
+            <option value="gemini">Gemini (Google)</option>
+            <option value="openai">ChatGPT (OpenAI)</option>
+            <option value="deepseek">DeepSeek</option>
+        </select>
+        <input type="password" id="apiKeyInput" placeholder="請輸入 API Key">
+        <div id="keyHint"></div>
+        <button id="saveBtn">儲存設定</button>
+        <div id="saveMsg">設定已儲存！</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

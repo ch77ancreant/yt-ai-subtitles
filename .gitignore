@@ -1,0 +1,8 @@
+# 本機開發工具
+.impeccable/
+.claude/
+
+# 打包產物與內部工作文件
+*.zip
+STORE_LISTING.md
+icon-previews/

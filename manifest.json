@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "日/韓語AI翻譯字幕",
   "version": "1.2",
-  "description": "即時讀取 YouTube 韓文／日文字幕並翻譯為繁體中文，雙語顯示。",
+  "description": "即時將 YouTube 日文/韓文字幕翻譯成繁體中文，雙語同步顯示。使用你自己的 AI 金鑰（Gemini / OpenAI / DeepSeek），無廣告、無追蹤、無中間伺服器。",
   "permissions": [
     "storage"
   ],

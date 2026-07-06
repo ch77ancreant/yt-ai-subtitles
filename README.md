@@ -73,7 +73,7 @@ inject.js (MAIN world)          content.js (ISOLATED world)      background.js (
 
 ## 支持開發
 
-如果這個擴充功能讓你的追劇體驗變好了，歡迎請開發者喝杯咖啡 ☕
+如果這個擴充功能讓你看影片體驗變好了，歡迎請開發者喝杯咖啡 ☕
 
 **[→ 贊助連結（Portaly）](https://portaly.cc/chunghan)**
 

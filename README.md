@@ -23,7 +23,7 @@
 
 ## 安裝
 
-- **Chrome 線上應用程式商店**：（上架審核中，連結即將補上）
+- **[Chrome 線上應用程式商店](https://chromewebstore.google.com/detail/日韓語ai翻譯字幕/jaaekgjdlnnhpikibapfhfclhamjadog)**：一鍵安裝，最推薦
 - **手動安裝（開發者模式）**：
   1. 下載或 clone 本專案
   2. 打開 `chrome://extensions`，開啟右上角「開發人員模式」

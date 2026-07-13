@@ -32,7 +32,7 @@
 ## 使用方式
 
 1. 取得任一家的 API Key：
-   - [Google AI Studio](https://aistudio.google.com)（Gemini，有免費額度）
+   - [Google AI Studio](https://aistudio.google.com)
    - [OpenAI Platform](https://platform.openai.com)
    - [DeepSeek Platform](https://platform.deepseek.com)
 2. 點擊工具列圖示，選擇翻譯引擎、貼上 API Key，儲存
